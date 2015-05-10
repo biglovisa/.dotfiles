@@ -1,0 +1,24 @@
+# 	Created by newuser for 5.0.7 	# 
+
+eval "$(rbenv init - zsh)"
+
+eval "$(hub alias -s)"
+
+
+# 	zsh configurations 	# 
+
+# build array of environment config files for sourcing 
+
+
+typeset -ga sources
+sources+="$HOME/.dotfiles/zsh/antigenrc.zsh"
+sources+="$HOME/.dotfiles/zsh/aliases.zsh"
+
+
+# include sources 
+
+foreach file (`echo $sources`)
+    if [[ -a $file ]]; then
+        source $file
+    fi
+end
