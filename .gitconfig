@@ -1,12 +1,13 @@
 [user]
-	name = Lovisa Svallingson
-	email = lovisasvallingson@gmail.com
+    name = Lovisa Svallingson
+    email = lovisasvallingson@gmail.com
+    initials = LS
 
 [push]
     default = upstream
 
 [color]
-    ui = true
+    ui = auto
 
 [color "branch"]
     current = yellow reverse
@@ -23,6 +24,3 @@
     added = yellow
     changed = green
     untracked = red
-
-[alias]
-    gs = status
