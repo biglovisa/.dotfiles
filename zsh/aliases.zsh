@@ -36,7 +36,8 @@ alias brewu="brew update && brew upgrade"
 #     Applications
 #
 
-alias chrome="open -a Google\ Chrome --args --disable-web-security"
+alias chrm="open -a Google\ Chrome --args --disable-web-security"
+alias srch="open http://google.com/"
 alias msg="open -a messages"
 alias slack="open -a slack"
 
