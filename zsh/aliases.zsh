@@ -21,7 +21,7 @@ alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   		# display path for troubleshooting
 alias tm1="cd ~/Turing/tm1"
 
-alias ll="ls -lahctr"  				              # lists sorted by date /most recent last / shows change time
+alias ll="ls -la"  				              # lists sorted by date /most recent last / shows change time
 alias lh="ls -lah"     				              # lists all with hidden files in readable sizes
 
 
@@ -37,7 +37,9 @@ alias brewu="brew update && brew upgrade"
 #
 
 alias chrm="open -a Google\ Chrome --args --disable-web-security"
-alias srch="open http://google.com/"
+alias srch="open http://google.com/ --args --disable-web-security"
 alias msg="open -a messages"
 alias slack="open -a slack"
+alias spot="open -a spotify"
+alias today="open http://today.turing.io/ "
 
