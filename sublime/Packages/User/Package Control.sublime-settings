@@ -1,0 +1,16 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Base16 Color Schemes",
+		"GitGutter",
+		"Package Control",
+		"Predawn",
+		"SideBarEnhancements",
+		"Theme - Asphalt",
+		"Theme - itg.flat",
+		"Theme - Spacegray"
+	]
+}
