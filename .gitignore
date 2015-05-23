@@ -23,3 +23,8 @@ Package Control.user-ca-bundle
 Package Control.merged-ca-bundle
 sublime/Packages/bz2/
 sublime/Installed Packages/
+
+.DS_Store
+.svn
+*~
+.*.swp
