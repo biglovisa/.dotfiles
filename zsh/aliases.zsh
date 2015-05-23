@@ -8,6 +8,8 @@ alias ga.="git add ."
 alias gc="git commit -m"
 alias gp="git push"
 alias gb="git browse"
+alias glog="git log"
+alias gd="git diff"
 
 #
 #	Shell
@@ -20,6 +22,8 @@ alias s.="subl ."
 alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   		# display path for troubleshooting
 alias tm1="cd ~/Turing/tm1"
+alias exr="cd ~/exercism/ruby"
+alias proj="cd ~/Projects"
 
 alias ll="ls -la"  				              # lists sorted by date /most recent last / shows change time
 alias lh="ls -lah"     				              # lists all with hidden files in readable sizes
@@ -30,7 +34,7 @@ alias lh="ls -lah"     				              # lists all with hidden files in readab
 #
 
 alias brewd="brew doctor"
-alias brewu="brew update && brew upgrade"
+alias brewu="brew update && brew upgrade --all"
 
 #
 #     Applications
@@ -42,4 +46,5 @@ alias msg="open -a messages"
 alias slack="open -a slack"
 alias spot="open -a spotify"
 alias today="open http://today.turing.io/ "
+alias gmail="open http://gmail.com"
 
