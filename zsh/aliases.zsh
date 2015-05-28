@@ -10,6 +10,10 @@ alias gp="git push"
 alias gb="git browse"
 alias glog="git log"
 alias gd="git diff"
+alias gpu="git push --set-upstream origin HEAD"
+alias gcb="git checkout -b"
+alias grv="git remote -v"
+alias glg="git log --graph"
 
 #
 #	Shell
@@ -23,7 +27,7 @@ alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   		# display path for troubleshooting
 alias tm1="cd ~/Turing/tm1"
 alias exr="cd ~/exercism/ruby"
-alias proj="cd ~/Projects"
+alias cdp="cd ~/Projects"
 
 alias ll="ls -la"  				              # lists sorted by date /most recent last / shows change time
 alias lh="ls -lah"     				              # lists all with hidden files in readable sizes
