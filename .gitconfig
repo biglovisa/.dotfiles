@@ -3,6 +3,9 @@
     email = lovisasvallingson@gmail.com
     initials = LS
 
+[core]
+  excludesfile = /Users/Lovisa/.gitignore_global
+
 [push]
     default = upstream
 
