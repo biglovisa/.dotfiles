@@ -14,6 +14,7 @@ alias gpu="git push --set-upstream origin HEAD"
 alias gcb="git checkout -b"
 alias grv="git remote -v"
 alias glg="git log --graph"
+alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;"
 
 #
 #	Shell
@@ -26,6 +27,7 @@ alias s.="subl ."
 alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   		# display path for troubleshooting
 alias tm1="cd ~/Turing/tm1"
+alias tm2="cd ~/Turing/tm2"
 alias exr="cd ~/exercism/ruby"
 alias cdp="cd ~/Projects"
 
@@ -44,11 +46,11 @@ alias brewu="brew update && brew upgrade --all"
 #     Applications
 #
 
-alias chrm="open -a Google\ Chrome --args --disable-web-security"
-alias srch="open http://google.com/ --args --disable-web-security"
+alias chrome="open http://google.com/ --args --disable-web-security"
 alias msg="open -a messages"
 alias slack="open -a slack"
 alias spot="open -a spotify"
-alias today="open http://today.turing.io/ "
+alias today="open http://today.turing.io/"
+alias tomorrow="open http://tomorrowturing.herokuapp.com/"
 alias gmail="open http://gmail.com"
 
