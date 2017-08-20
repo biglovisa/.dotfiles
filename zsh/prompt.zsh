@@ -1,0 +1,3 @@
+PROMPT="$(whoami)
+▶ "
+

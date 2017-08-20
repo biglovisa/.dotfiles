@@ -1,0 +1,42 @@
+###	zsh configurations	###
+
+###	zsh options
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt PROMPT_SUBST
+
+###	Configure $PATH and load ENV variables
+
+export DOTFILES="$HOME/.dotfiles"
+export PATH="$DOTFILES/bin:$PATH"
+
+export GOPATH="$HOME/Code/go"
+export PATH="$GOPATH/bin:$PATH"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+### load zsh config files
+
+source "$HOME/.dotfiles/zsh/aesthetics.zsh"
+source "$HOME/.dotfiles/zsh/antibodyrc.zsh"
+source "$HOME/.dotfiles/zsh/aliases.zsh"
+source "$HOME/.dotfiles/zsh/prompt.zsh"
+
+###	Functions
+
+# ls after cd
+function chpwd() {
+  emulate -L zsh
+  ls -la
+}
+
+###	Shell config
+
+# autocomplete
+
+source /usr/local/share/zsh/site-functions/git-completion.bash 2>/dev/null
