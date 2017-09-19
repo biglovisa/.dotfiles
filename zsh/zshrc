@@ -25,6 +25,7 @@ source "$HOME/.dotfiles/zsh/aesthetics.zsh"
 source "$HOME/.dotfiles/zsh/antibodyrc.zsh"
 source "$HOME/.dotfiles/zsh/aliases.zsh"
 source "$HOME/.dotfiles/zsh/prompt.zsh"
+source "$HOME/.dotfiles/secrets.zsh"
 
 ###	Functions
 

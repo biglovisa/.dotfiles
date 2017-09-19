@@ -30,5 +30,5 @@ sublime/Installed Packages/
 .svn
 *~
 *.swp
-~/.dotfiles/zsh/hidden.zsh
+~/.dotfiles/secrets.zsh
 

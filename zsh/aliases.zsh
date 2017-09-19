@@ -24,7 +24,13 @@ alias dots="cd ~/.dotfiles"
 alias path='echo $PATH | tr -s ":" "\n"'
 alias st="subl"
 
+### Applications
+
+alias mk="minikube"
+alias kctl="kubectl"
+
+alias pe="pyenv"
+
 ###	Change directories
 
 alias cod="cd ~/Code"
-
