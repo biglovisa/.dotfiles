@@ -10,11 +10,9 @@ alias gc="git commit"
 alias gco="git checkout"
 alias gb="git branch"
 alias ga="git add"
-alias gs="git status -sb"
+alias gs="git status"
 alias gcl="git clone"
 alias grv="git remote -v"
-
-alias hub="git hub"
 
 ###	Shell
 
@@ -23,6 +21,7 @@ alias cl="clear"
 alias dots="cd ~/.dotfiles"
 alias path='echo $PATH | tr -s ":" "\n"'
 alias st="subl"
+alias ..="cd .."
 
 ### Applications
 
@@ -31,6 +30,10 @@ alias kctl="kubectl"
 
 alias pe="pyenv"
 
-###	Change directories
+alias dk="docker"
+
+###	Directory jumps
 
 alias cod="cd ~/Code"
+alias wor="cd ~/Desktop/words"
+alias todo="vim ~/Desktop/words/todo.md"
