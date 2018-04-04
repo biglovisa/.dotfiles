@@ -8,13 +8,6 @@ setopt PROMPT_SUBST
 
 precmd_functions+=(prompt)
 
-# prompt
-
-prompt () {
-    PROMPT='✨ %F{blue}$(pwd)%f%F{green}$(if [ -e .git ]; then git branch 2>/dev/null | grep '^*' | tr "*" ":"; fi)%f  '
-    RPROMPT='%F{yellow}⏰  $(date +"%H:%M")%f'
-}
-
 ###-----------	Configure $PATH -----------###
 
 export DOTFILES="$HOME/.dotfiles"
@@ -33,7 +26,7 @@ export RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)"
 
 ### load zsh config files ###
 
-# source "$HOME/.dotfiles/zsh/aesthetics.zsh"
+source "$HOME/.dotfiles/zsh/prompt.zsh"
 source "$HOME/.dotfiles/zsh/functions.zsh"
 source "$HOME/.dotfiles/zsh/aliases.zsh"
 source "$HOME/.dotfiles/secrets.zsh"
