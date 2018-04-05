@@ -37,3 +37,5 @@ alias dk="docker"
 alias cod="cd ~/Code"
 alias wor="cd ~/Desktop/words"
 alias todo="vim ~/Desktop/words/todo.md"
+
+### TO BE ORGANIZED - DO NOT DELETE
