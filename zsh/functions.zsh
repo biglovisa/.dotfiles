@@ -13,3 +13,10 @@ setalias() {
 
   echo "alias $name=\"$value\"" >> "$HOME/.dotfiles/zsh/aliases.zsh"
 }
+
+# A wrapper function around the wttr.in API. Displays weather using the metric system
+# $1: the location you want to check
+wtw() {
+  location=$1
+  curl wttr.in/$location?m
+}
