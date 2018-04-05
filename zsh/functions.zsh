@@ -1,7 +1,12 @@
+# A function which downloads all URLs passed to it. 
+# $1: a file with URLs to be downloaded separated by a newline
 dl() {
   youtube-dl $(cat $1 | tr "\n" " ")
 }
 
+# A function which sets an alias in the $HOME/.dotfiles/zsh/aliases.zsh file
+# $1: the name of the alias
+# $@: the command should to be aliased 
 setalias() {
   name=$1
   value=${@:2}
