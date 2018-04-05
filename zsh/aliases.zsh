@@ -22,6 +22,7 @@ alias dots="cd ~/.dotfiles"
 alias path='echo $PATH | tr -s ":" "\n"'
 alias st="subl"
 alias ..="cd .."
+alias esh="exec $SHELL"
 
 ### Applications
 
