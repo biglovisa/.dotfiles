@@ -11,7 +11,6 @@ alias gco="git checkout"
 alias gb="git branch"
 alias ga="git add"
 alias gs="git status"
-alias gcl="git clone"
 alias grv="git remote -v"
 
 ###	Shell
