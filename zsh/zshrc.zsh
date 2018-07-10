@@ -29,14 +29,11 @@ export RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)"
 source "$HOME/.dotfiles/zsh/prompt.zsh"
 source "$HOME/.dotfiles/zsh/functions.zsh"
 source "$HOME/.dotfiles/zsh/aliases.zsh"
-source "$HOME/.dotfiles/secrets.zsh"
-
-source "/usr/local/bin/google-cloud-sdk/path.zsh.inc"
 
 ###-----------	Shell config -----------###
 
 # autocomplete
 source /usr/local/share/zsh/site-functions/git-completion.bash 2>/dev/null
 
-# always color matches  
+# always color matches
 GREP_OPTIONS='--color=auto'
