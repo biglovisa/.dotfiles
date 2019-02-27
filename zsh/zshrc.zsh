@@ -21,7 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv >/dev/null; then eval "$(pyenv init -)"; fi
 
 export RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)"
 

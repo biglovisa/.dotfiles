@@ -1,3 +1,4 @@
+#!/bin/bash
 # A function which downloads all URLs passed to it.
 # $1: a file with URLs to be downloaded separated by a newline
 dl() {
