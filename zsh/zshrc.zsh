@@ -1,3 +1,4 @@
+#!/bin/bash
 ###-----------	zsh options -----------###
 
 HISTFILE=~/.zsh_history
