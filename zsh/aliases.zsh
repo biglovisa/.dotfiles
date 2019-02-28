@@ -1,6 +1,13 @@
 #!/bin/bash
 ###	Aliases
 
+### handshake specifics
+
+alias hsdev="foreman start -f Procfile.dev"
+alias hsdnw="foreman start -f Procfile.dev all=1,webpack=0"
+alias hsw="yarn webpack:dev"
+alias hs="cd ~/hs"
+
 ###	Git
 
 alias glg="git log --graph --decorate --oneline --abbrev-commit"
