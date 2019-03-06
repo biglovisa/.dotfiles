@@ -41,3 +41,11 @@ function up() {
   bundle install
   bundle exec rake db:migrate
 }
+
+function hskill() {
+  echo "Sending SIGKILL to node/puma processes"
+  ps aux | grep 'node' | grep 'hot' | awk '{print $2}' | xargs kill -9
+  ps aux | grep 'puma' | grep 'handshake' | awk '{print $2}' | xargs kill -9
+  ps aux | grep 'webpack-static-assets' | grep 'node' | awk '{print $2}' | xargs kill -9
+  ps aux | grep '/webpack ' | grep 'handshake' | awk '{print $2}' | xargs kill -9
+}
