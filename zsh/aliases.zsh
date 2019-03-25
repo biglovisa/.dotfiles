@@ -16,6 +16,10 @@ alias vbr="git reflog | grep -o \"checkout: moving from .* to \" |\
     sed -e 's/checkout: moving from //' -e 's/ to $//' | head -20"
 alias del-merged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
 
+### Hub
+
+alias hbr="hub browse"
+
 ###	Shell
 
 alias ll="ls -la"
