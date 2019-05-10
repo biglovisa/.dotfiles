@@ -11,11 +11,10 @@ alias ops="cd ~/hs/ops"
 alias hsm="cd ~/hs/handshake"
 
 alias spr="ops && seira production2 handshake pods connect"
-alias spp="ops && seira prodction2 handshake db psql"
+alias spp="ops && seira production2 handshake db psql"
 
-alias ssr="ops && seira staging2 handshake pods connect"
-alias ssp="ops && seira staging2 handshake db psql"
-
+alias sdr="ops && seira demo2 handshake pods connect"
+alias sdp="ops && seira demo2 handshake db psql"
 
 alias ssr="ops && seira staging2 handshake pods connect"
 alias ssp="ops && seira staging2 handshake db psql"
