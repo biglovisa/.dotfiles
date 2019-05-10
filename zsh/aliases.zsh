@@ -7,6 +7,22 @@ alias hsdev="foreman start -f Procfile.dev"
 alias hsdnw="foreman start -f Procfile.dev all=1,webpack=0"
 alias hsw="yarn webpack:dev"
 alias hs="cd ~/hs"
+alias ops="cd ~/hs/ops"
+alias hsm="cd ~/hs/handshake"
+
+alias spr="ops && seira production2 handshake pods connect"
+alias spp="ops && seira prodction2 handshake db psql"
+
+alias ssr="ops && seira staging2 handshake pods connect"
+alias ssp="ops && seira staging2 handshake db psql"
+
+
+alias ssr="ops && seira staging2 handshake pods connect"
+alias ssp="ops && seira staging2 handshake db psql"
+
+###
+
+alias br="bundle exec rspec"
 
 ###	Git
 
