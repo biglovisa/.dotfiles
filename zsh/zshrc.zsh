@@ -50,3 +50,6 @@ if [ -f '/Users/lovisasvallingson/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lovisasvallingson/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lovisasvallingson/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PUBSUB_EMULATOR_HOST=localhost:8085
+export PUBSUB_PROJECT_ID=handshake-development-204119
