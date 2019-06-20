@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ###-----------	zsh options -----------###
 
 HISTFILE=~/.zsh_history
@@ -53,3 +54,4 @@ if [ -f '/Users/lovisasvallingson/google-cloud-sdk/completion.zsh.inc' ]; then .
 
 export PUBSUB_EMULATOR_HOST=localhost:8085
 export PUBSUB_PROJECT_ID=handshake-development-204119
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
