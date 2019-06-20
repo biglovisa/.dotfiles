@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # A function which downloads all URLs passed to it.
 # $1: a file with URLs to be downloaded separated by a newline
 dl() {
@@ -35,6 +36,7 @@ rmCL() {
   fi
 }
 
+# Updates Rails repositories
 function up() {
   git checkout master
   git pull
@@ -43,10 +45,18 @@ function up() {
   bundle exec rake db:migrate
 }
 
+# Deletes all running processes related to prefix
 function hskill() {
   echo "Sending SIGKILL to node/puma processes"
   ps aux | grep 'node' | grep 'hot' | awk '{print $2}' | xargs kill -9
-  ps aux | grep 'puma' | grep 'handshake' | awk '{print $2}' | xargs kill -9
+  ps aux | grep 'puma' | grep $1 | awk '{print $2}' | xargs kill -9
   ps aux | grep 'webpack-static-assets' | grep 'node' | awk '{print $2}' | xargs kill -9
   ps aux | grep '/webpack ' | grep 'handshake' | awk '{print $2}' | xargs kill -9
+}
+
+# Signs a commit with given author
+# $1: author's email
+function gca() {
+  author = $1 || $(git config user.email)
+  git commit --author=$1
 }
