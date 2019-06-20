@@ -1,3 +1,4 @@
 #!/bin/bash
 ### source zshrc ###
-source "~/.zshrc"
+
+source ~/.zshrc

@@ -39,6 +39,7 @@ function up() {
   git checkout master
   git pull
   bundle install
+  yarn install
   bundle exec rake db:migrate
 }
 
