@@ -12,6 +12,8 @@ echo "Installing rbenv..."
 brew install rbenv
 rbenv init
 
+brew install hub
+
 # -------------- Verifying installed software
 
 echo "Verifying installed software"
