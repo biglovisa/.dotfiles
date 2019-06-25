@@ -39,7 +39,7 @@ function up() {
   git checkout master
   git pull
   bundle install
-  yarn install
+  # yarn install - do not do this all the time. it fucks up my env
   bundle exec rake db:migrate
 }
 
