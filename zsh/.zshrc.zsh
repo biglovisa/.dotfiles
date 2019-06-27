@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ###-----------	zsh options -----------###
 
 HISTFILE=~/.zsh_history
@@ -26,7 +27,6 @@ export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv >/dev/null; then eval "$(pyenv init -)"; fi
 
 export RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)"
-export QMAKE="$(brew --prefix qt@5.5)/bin/qmake"
 
 ### load zsh config files ###
 
@@ -45,11 +45,12 @@ GREP_OPTIONS='--color=auto'
 # rbenv
 eval "$(rbenv init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/lovisasvallingson/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lovisasvallingson/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/lovisasvallingson/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lovisasvallingson/google-cloud-sdk/completion.zsh.inc'; fi
-
 export PUBSUB_EMULATOR_HOST=localhost:8085
 export PUBSUB_PROJECT_ID=handshake-development-204119
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lovisa/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lovisa/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lovisa/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lovisa/google-cloud-sdk/completion.zsh.inc'; fi
