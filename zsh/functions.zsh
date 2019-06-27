@@ -41,7 +41,10 @@ function up() {
   git checkout master
   git pull
   bundle install
-  yarn install
+  nvm use
+  rm -rf node_modules
+  yarn --force install
+  npm rebuild node-sass
   bundle exec rake db:migrate
 }
 

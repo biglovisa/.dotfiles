@@ -3,15 +3,17 @@
 
 ### hs
 
-alias hsdev="foreman start -f Procfile"
-alias hsdnw="foreman start -f Procfile all=1,webpack=0"
-alias hsw="yarn webpack:dev"
+alias fs="foreman start -f Procfile"
+alias fsw="foreman start -f Procfile -m all=0,web=1,webpack=0"
 alias hs="cd ~/hs"
 alias ops="cd ~/hs/ops"
 alias hsm="cd ~/hs/handshake"
+alias jd="nvm use && rm -rf node_modules && yarn --force install"
+alias dcu="docker-compose up"
 
 ###
-
+alias cd='function cdnvm(){ cd $@; if [[ -f .nvmrc ]]; then <.nvmrc nvm install; fi; };cdnvm'
+alias kp="ps aux | grep puma | sed -E 's/[[:space:]]+/ /g' | cut -d' ' -f 2 | xargs kill -9"
 alias br="bundle exec rspec"
 
 ###	Git
