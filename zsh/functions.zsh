@@ -63,3 +63,22 @@ function gca() {
   author = $1 || $(git config user.email)
   git commit --author=$1
 }
+
+removecontainers() {
+  docker stop $(docker ps -aq)
+  docker rm $(docker ps -aq)
+}
+
+armageddon() {
+  removecontainers
+  docker network prune -f
+  docker rmi -f $(docker images --filter dangling=true -qa)
+  docker volume rm $(docker volume ls --filter dangling=true -q)
+  docker rmi -f $(docker images -qa)
+}
+
+nuke() {
+  name=$1
+  ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+
