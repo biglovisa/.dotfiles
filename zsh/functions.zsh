@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # A function which downloads all URLs passed to it.
 # $1: a file with URLs to be downloaded separated by a newline
 dl() {
@@ -34,9 +36,49 @@ rmCL() {
   fi
 }
 
+# Updates Rails repositories
 function up() {
   git checkout master
   git pull
   bundle install
+  nvm use
+  rm -rf node_modules
+  yarn --force install
+  npm rebuild node-sass
   bundle exec rake db:migrate
 }
+
+# Deletes all running processes related to prefix
+function hskill() {
+  echo "Sending SIGKILL to node/puma processes"
+  ps aux | grep 'node' | grep 'hot' | awk '{print $2}' | xargs kill -9
+  ps aux | grep 'puma' | grep $1 | awk '{print $2}' | xargs kill -9
+  ps aux | grep 'webpack-static-assets' | grep 'node' | awk '{print $2}' | xargs kill -9
+  ps aux | grep '/webpack ' | grep 'handshake' | awk '{print $2}' | xargs kill -9
+}
+
+# Signs a commit with given author
+# $1: author's email
+function gca() {
+  author = $1 || $(git config user.email)
+  git commit --author=$1
+}
+
+removecontainers() {
+  docker stop $(docker ps -aq)
+  docker rm $(docker ps -aq)
+}
+
+armageddon() {
+  removecontainers
+  docker network prune -f
+  docker rmi -f $(docker images --filter dangling=true -qa)
+  docker volume rm $(docker volume ls --filter dangling=true -q)
+  docker rmi -f $(docker images -qa)
+}
+
+nuke() {
+  name=$1
+  ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+

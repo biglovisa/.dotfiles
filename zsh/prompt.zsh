@@ -1,10 +1,9 @@
+#!/bin/bash
 parse_git_branch() {
-    if [ -e .git ]; then 
-        git branch 2>/dev/null | grep '^*' | tr "*" ":"; 
-    fi
+    git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-prompt () {
-    PROMPT="✨ %F{blue}$(pwd)%f%F{green}$(parse_git_branch)%f "
-    RPROMPT='%F{yellow}⏰  $(date +"%H:%M")%f'
+prompt() {
+    PROMPT="✨ %F{blue}$(pwd)%f%F{yellow}$(parse_git_branch)%f "
+    RPROMPT='%F{blue}♻️  $(node -v)%f %F{yellow}| %f%F{blue}$(date +"%H:%M")%f'
 }

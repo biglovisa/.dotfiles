@@ -1,4 +1,9 @@
+#!/bin/bash
 ###	Aliases
+
+alias cd='function cdnvm(){ cd $@; if [[ -f .nvmrc ]]; then <.nvmrc nvm install; fi; };cdnvm'
+alias kp="ps aux | grep puma | sed -E 's/[[:space:]]+/ /g' | cut -d' ' -f 2 | xargs kill -9"
+alias br="bundle exec rspec"
 
 ###	Git
 
@@ -13,7 +18,7 @@ alias ga="git add"
 alias gs="git status"
 alias grv="git remote -v"
 alias vbr="git reflog | grep -o \"checkout: moving from .* to \" |\
-    sed -e 's/checkout: moving from //' -e 's/ to $//' | head -20"
+    sed -e 's/checkout: moving from //' -e 's/ to $//' | head -10 | grep -v 'master'"
 alias del-merged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
 
 ### Hub
@@ -46,3 +51,4 @@ alias wor="cd ~/Desktop/words"
 alias todo="vim ~/Desktop/words/todo.md"
 
 ### TO BE ORGANIZED - DO NOT DELETE
+alias rubolint="bundle exec rubocop --parallel"
