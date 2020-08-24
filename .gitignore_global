@@ -4,3 +4,4 @@
 *.swp
 ~/.dotfiles/secrets.zsh
 .vscode/
+dump.rdb
