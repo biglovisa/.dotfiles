@@ -45,12 +45,6 @@ GREP_OPTIONS='--color=auto'
 # rbenv
 eval "$(rbenv init -)"
 
-export PUBSUB_EMULATOR_HOST=localhost:8085
-export PUBSUB_PROJECT_ID=handshake-development-204119
+export AWS_PROFILE='patch'
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/lovisa/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lovisa/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/lovisa/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lovisa/google-cloud-sdk/completion.zsh.inc'; fi

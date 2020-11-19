@@ -36,27 +36,6 @@ rmCL() {
   fi
 }
 
-# Updates Rails repositories
-function up() {
-  git checkout master
-  git pull
-  bundle install
-  nvm use
-  rm -rf node_modules
-  yarn --force install
-  npm rebuild node-sass
-  bundle exec rake db:migrate
-}
-
-# Deletes all running processes related to prefix
-function hskill() {
-  echo "Sending SIGKILL to node/puma processes"
-  ps aux | grep 'node' | grep 'hot' | awk '{print $2}' | xargs kill -9
-  ps aux | grep 'puma' | grep $1 | awk '{print $2}' | xargs kill -9
-  ps aux | grep 'webpack-static-assets' | grep 'node' | awk '{print $2}' | xargs kill -9
-  ps aux | grep '/webpack ' | grep 'handshake' | awk '{print $2}' | xargs kill -9
-}
-
 # Signs a commit with given author
 # $1: author's email
 function gca() {
@@ -82,3 +61,6 @@ nuke() {
   ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9
 }
 
+access() {
+  kubectl -n patch exec -it $1 -- bash
+}
