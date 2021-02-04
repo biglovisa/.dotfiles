@@ -12,13 +12,13 @@ alias gp="git push origin HEAD"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gc="git commit"
-alias gco="git checkout"
+alias gcm="git checkout main"
 alias gb="git branch"
 alias ga="git add"
 alias gs="git status"
 alias grv="git remote -v"
 alias vbr="git reflog | grep -o \"checkout: moving from .* to \" |\
-    sed -e 's/checkout: moving from //' -e 's/ to $//' | head -10 | grep -v 'master'"
+    sed -e 's/checkout: moving from //' -e 's/ to $//' | head -30 | grep -v 'main'"
 alias del-merged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
 
 ### Hub

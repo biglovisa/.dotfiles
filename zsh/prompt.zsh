@@ -4,6 +4,6 @@ parse_git_branch() {
 }
 
 prompt() {
-    PROMPT="✨ %F{blue}$(pwd)%f%F{yellow}$(parse_git_branch)%f "
-    RPROMPT='%F{blue}♻️  $(node -v)%f %F{yellow}| %f%F{blue}$(date +"%H:%M")%f'
+    PROMPT="😈 %F{blue}$(pwd)%f%F{yellow}$(parse_git_branch)%f "
+    RPROMPT='%F{blue}$(date +"%H:%M")%f 🧹'
 }
