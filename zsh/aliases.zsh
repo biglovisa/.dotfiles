@@ -18,7 +18,7 @@ alias ga="git add"
 alias gs="git status"
 alias grv="git remote -v"
 alias vbr="git reflog | grep -o \"checkout: moving from .* to \" |\
-    sed -e 's/checkout: moving from //' -e 's/ to $//' | head -30 | grep -v 'main'"
+    sed -e 's/checkout: moving from //' -e 's/ to $//' | uniq | head -30 | grep -v 'main'"
 alias del-merged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
 
 ### Hub
